@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光电抗衰 搜索广告素材建议</title>
+<style>
+:root {
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+  --primary-bg: #f0f0ff;
+  --primary-bg2: #e8e8ff;
+  --text: #1a1a2e;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 12px rgba(0,0,0,.04);
+  --shadow-lg: 0 4px 24px rgba(0,0,0,.08);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; }
+.nav-inner { max-width: 960px; width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { font-weight: 700; font-size: 16px; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+.nav-links { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.nav-links a { font-size: 13px; color: var(--text-secondary); text-decoration: none; padding: 6px 12px; border-radius: 8px; white-space: nowrap; transition: all .2s; }
+.nav-links a:hover { color: var(--primary); background: var(--primary-bg); }
+.hero { padding: 100px 24px 60px; text-align: center; background: linear-gradient(135deg, #f0f0ff 0%, #f8fafc 50%, #e8e8ff 100%); position: relative; overflow: hidden; }
+.hero::before { content:''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(99,102,241,.06) 0%, transparent 70%); border-radius: 50%; }
+.hero::after { content:''; position: absolute; bottom: -30%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99,102,241,.04) 0%, transparent 70%); border-radius: 50%; }
+.hero h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 800; background: linear-gradient(135deg, #1a1a2e, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 16px; position: relative; z-index: 1; }
+.hero .subtitle { font-size: 16px; color: var(--text-secondary); max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.overview { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow-lg); padding: 32px; margin: -20px auto 48px; position: relative; z-index: 2; border: 1px solid var(--border); }
+.overview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 20px; }
+.overview-item { padding: 16px; background: var(--primary-bg); border-radius: var(--radius-sm); }
+.overview-item .label { font-size: 12px; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+.overview-item .value { font-size: 15px; color: var(--text); font-weight: 600; line-height: 1.5; }
+.overview-note { background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 1px solid #fde68a; border-radius: var(--radius-sm); padding: 14px 18px; font-size: 13px; color: #92400e; line-height: 1.7; }
+.overview-note strong { color: #78350f; }
+.section { margin-bottom: 48px; }
+.section-title { font-size: 24px; font-weight: 700; color: var(--text); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+.section-title .icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; flex-shrink: 0; }
+.scene-map { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--card); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.scene-map th { background: linear-gradient(135deg, #1a1a2e, #2d2d44); color: #fff; font-weight: 600; font-size: 13px; padding: 14px 16px; text-align: left; letter-spacing: .3px; }
+.scene-map td { padding: 14px 16px; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: top; }
+.scene-map tr:last-child td { border-bottom: none; }
+.scene-map tbody tr { transition: background .15s; }
+.scene-map tbody tr:hover { background: var(--primary-bg); }
+.scene-map .pv { font-weight: 700; color: var(--primary); font-size: 15px; }
+.scene-map .scene-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--primary-bg); color: var(--primary); border-radius: 50%; font-weight: 700; font-size: 12px; }
+.scene-map .scene-name { font-weight: 600; color: var(--text); }
+.scene-map .material-name { color: var(--primary-light); font-weight: 500; }
+.scene-map tfoot td { background: #f8fafc; font-weight: 700; font-size: 14px; }
+.sell-points { display: grid; gap: 12px; }
+.sell-point { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; transition: all .2s; }
+.sell-point:hover { box-shadow: var(--shadow); border-color: var(--primary-light); }
+.sell-point-name { font-weight: 700; color: var(--primary); font-size: 15px; margin-bottom: 6px; }
+.sell-point-desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; line-height: 1.7; }
+.sell-point-cover { font-size: 12px; color: var(--text-muted); }
+.sell-point-cover span { display: inline-block; background: var(--primary-bg); color: var(--primary); padding: 2px 8px; border-radius: 4px; font-size: 11px; margin: 2px 4px 2px 0; }
+.scene-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 32px; box-shadow: var(--shadow); }
+.scene-card-header { padding: 24px 28px; background: linear-gradient(135deg, #1a1a2e, #2d2d44); color: #fff; }
+.scene-card-header .num { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(255,255,255,.15); border-radius: 50%; font-weight: 700; font-size: 14px; margin-right: 12px; }
+.scene-card-header h3 { font-size: 18px; font-weight: 700; display: inline; }
+.scene-card-header .reason { font-size: 13px; color: rgba(255,255,255,.7); margin-top: 12px; line-height: 1.7; padding-left: 44px; }
+.scene-card-body { padding: 28px; }
+.material { border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 20px; }
+.material:last-child { margin-bottom: 0; }
+.material-title { padding: 16px 20px; background: var(--primary-bg); font-weight: 600; font-size: 15px; color: var(--primary); display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
+.material-title .pv-badge { margin-left: auto; background: var(--primary); color: #fff; padding: 2px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.material-content { padding: 20px; }
+.field { margin-bottom: 18px; }
+.field:last-child { margin-bottom: 0; }
+.field-label { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.field-label::before { content:''; width: 3px; height: 12px; background: var(--primary); border-radius: 2px; }
+.field-value { font-size: 14px; color: var(--text); line-height: 1.8; }
+.field-value .highlight { background: linear-gradient(180deg, transparent 60%, rgba(99,102,241,.12) 60%); padding: 0 2px; font-weight: 600; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { background: var(--bg); border: 1px solid var(--border); padding: 3px 10px; border-radius: 6px; font-size: 12px; color: var(--text-secondary); }
+.word-list { max-height: 120px; overflow-y: auto; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px; font-size: 12px; color: var(--text-secondary); line-height: 2; }
+.word-list span { display: inline-block; margin: 2px 4px 2px 0; background: var(--card); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); }
+.footer { text-align: center; padding: 40px 24px; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); margin-top: 48px; }
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hero { padding: 90px 16px 40px; }
+  .hero h1 { font-size: 26px; }
+  .overview { margin: -10px 12px 32px; padding: 20px; }
+  .overview-grid { grid-template-columns: 1fr; gap: 12px; }
+  .container { padding: 0 12px; }
+  .scene-map { font-size: 12px; }
+  .scene-map th, .scene-map td { padding: 10px 12px; }
+  .scene-card-header, .scene-card-body { padding: 16px; }
+  .scene-card-header .reason { padding-left: 0; }
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      光电抗衰 · 搜索广告素材建议
+    </div>
+    <div class="nav-links">
+      <a href="#overview">投放综述</a>
+      <a href="#scene-map">场景地图</a>
+      <a href="#sell-points">卖点分布</a>
+      <a href="#scene-1">场景1</a>
+      <a href="#scene-2">场景2</a>
+      <a href="#scene-3">场景3</a>
+      <a href="#scene-4">场景4</a>
+      <a href="#scene-5">场景5</a>
+      <a href="#scene-6">场景6</a>
+      <a href="#scene-7">场景7</a>
+      <a href="#scene-8">场景8</a>
+      <a href="#scene-9">场景9</a>
+    </div>
+  </div>
+</nav>
+<header class="hero">
+  <h1>光电抗衰 · 搜索广告素材建议</h1>
+  <p class="subtitle">基于用户搜索行为洞察，精准触达光电抗衰需求人群，覆盖 9 大核心场景、10 条素材创意</p>
+</header>
+<div class="container">
+<div class="overview" id="overview">
+  <div class="overview-grid">
+    <div class="overview-item"><div class="label">产品</div><div class="value">光电抗衰</div></div>
+    <div class="overview-item"><div class="label">核心受众</div><div class="value">年龄20+，女性，希望改善面部整体皮肤状态，提升紧致，抗衰老人群</div></div>
+    <div class="overview-item"><div class="label">本次建议</div><div class="value">共 <strong style="color:var(--primary)">9 个场景</strong> / <strong style="color:var(--primary)">10 条素材</strong> / 总预估 PV <strong style="color:var(--primary);font-size:18px">40.7w</strong></div></div>
+  </div>
+  <div class="overview-note"><strong>💡 备注：</strong>全量搜索词不等于竞价词包，只是从搜索热度背后洞察用户心理，并关联到医美场景上，仅供参考。</div>
+</div>
+
+<div class="section" id="scene-map">
+  <h2 class="section-title"><span class="icon">🗺️</span>场景地图</h2>
+  <div class="table-wrap">
+  <table class="scene-map">
+    <thead><tr><th>#</th><th>场景</th><th>素材</th><th>核心卖点</th><th>预估PV</th></tr></thead>
+    <tbody>
+      <tr><td><span class="scene-num">1</span></td><td class="scene-name">法令纹突然深了怎么救</td><td class="material-name">法令纹急救·无创光电解决方案<br><span class="material-name" style="font-weight:400;font-size:12px;color:var(--text-muted)">面中凹陷自救·年轻肌抗衰指南</span></td><td>用户搜「法令纹怎么改善」的痛点 → 引出「无创不破皮·一次治疗多重改善」</td><td class="pv">5.8w<br><span class="pv" style="font-size:12px;color:var(--text-muted)">5.8w</span></td></tr>
+      <tr><td><span class="scene-num">2</span></td><td class="scene-name">护肤用到头了想试试医美</td><td class="material-name">护肤品瓶颈·光电抗衰升级路</td><td>用户搜「护肤品没效果」的挫败 → 引出「无创不破皮·肤质改善」</td><td class="pv">5.8w</td></tr>
+      <tr><td><span class="scene-num">3</span></td><td class="scene-name">被闺蜜比下去的容貌焦虑</td><td class="material-name">同龄人差距·抗衰逆袭攻略</td><td>用户搜「抗衰项目推荐」的迷茫 → 引出「无创不破皮·一次多重改善」</td><td class="pv">4.6w</td></tr>
+      <tr><td><span class="scene-num">4</span></td><td class="scene-name">皱纹松弛一起上的崩溃</td><td class="material-name">多重衰老信号·光电一次解决</td><td>用户搜「一个项目改善多个问题」→ 直接对应「一次治疗多重改善」</td><td class="pv">4.5w</td></tr>
+      <tr><td><span class="scene-num">5</span></td><td class="scene-name">抗初老黄金期的紧迫感</td><td class="material-name">20+抗初老·光电抗衰入门指南</td><td>用户搜「抗初老从几岁开始」的预防焦虑 → 引出「无创安全·肤质改善」</td><td class="pv">3.3w</td></tr>
+      <tr><td><span class="scene-num">6</span></td><td class="scene-name">怕动刀怕恢复期的怂包心态</td><td class="material-name">怕痛星人·无创光电抗衰攻略</td><td>用户搜「怕痛能做医美吗」的恐惧 → 引出「无创不破皮·无恢复期」</td><td class="pv">3.1w</td></tr>
+      <tr><td><span class="scene-num">7</span></td><td class="scene-name">重要场合前的急救护肤</td><td class="material-name">婚前急救·无恢复期光电救场</td><td>用户搜「婚前急救护肤」的紧迫感 → 引出「无恢复期·随做随走」</td><td class="pv">2.8w</td></tr>
+      <tr><td><span class="scene-num">8</span></td><td class="scene-name">刷到科普被种草想行动</td><td class="material-name">光电抗衰避雷·机构选择指南</td><td>用户搜「光电抗衰攻略/哪家好」的决策需求 → 引出「无创安全·多重改善」</td><td class="pv">2.6w</td></tr>
+      <tr><td><span class="scene-num">9</span></td><td class="scene-name">华南湿热加速衰老的恐慌</td><td class="material-name">华南气候抗衰·地域护肤攻略</td><td>用户搜「南方气候皮肤老化快」的地域焦虑 → 引出「肤质改善·毛孔粗大改善」</td><td class="pv">2.3w</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">合计</td><td>9个场景 / 10条素材</td><td></td><td class="pv" style="font-size:18px">40.7w</td></tr></tfoot>
+  </table>
+  </div>
+</div>
+
+<div class="section" id="sell-points">
+  <h2 class="section-title"><span class="icon">💎</span>卖点分布</h2>
+  <div class="sell-points">
+    <div class="sell-point"><div class="sell-point-name">紧致提升</div><div class="sell-point-desc">改善面部松弛下垂，恢复轮廓线条</div><div class="sell-point-cover">覆盖场景：<span>法令纹突然深了怎么救</span><span>皱纹松弛一起上的崩溃</span><span>重要场合前的急救护肤</span></div></div>
+    <div class="sell-point"><div class="sell-point-name">祛皱抚纹</div><div class="sell-point-desc">淡化面部细纹皱纹，恢复平滑肤质</div><div class="sell-point-cover">覆盖场景：<span>法令纹突然深了怎么救</span><span>皱纹松弛一起上的崩溃</span><span>怕动刀怕恢复期的怂包心态</span></div></div>
+    <div class="sell-point"><div class="sell-point-name">肤质改善</div><div class="sell-point-desc">粗糙肤质细腻化，提升皮肤光泽度</div><div class="sell-point-cover">覆盖场景：<span>法令纹突然深了怎么救</span><span>皱纹松弛一起上的崩溃</span><span>重要场合前的急救护肤</span></div></div>
+    <div class="sell-point"><div class="sell-point-name">无创安全</div><div class="sell-point-desc">不破损皮肤表面，无恢复期，随做随走</div><div class="sell-point-cover">覆盖场景：<span>怕动刀怕恢复期的怂包心态</span><span>重要场合前的急救护肤</span><span>刷到科普被种草想行动</span></div></div>
+    <div class="sell-point"><div class="sell-point-name">多重改善</div><div class="sell-point-desc">单次治疗同时改善多个老化维度</div><div class="sell-point-cover">覆盖场景：<span>皱纹松弛一起上的崩溃</span><span>被闺蜜比下去的容貌焦虑</span><span>护肤用到头了想试试医美</span></div></div>
+  </div>
+</div>
+
+<div class="section" id="scenes">
+  <h2 class="section-title"><span class="icon">📋</span>场景详情</h2>
+
+  <!-- Scene 1 -->
+  <div class="scene-card" id="scene-1">
+    <div class="scene-card-header">
+      <span class="num">1</span><h3>法令纹突然深了怎么救</h3>
+      <p class="reason">场景推荐理由：法令纹是最显老的衰老信号之一，用户搜索量大且意图明确。该场景处于焦虑急救心理，决策窗口短，投放转化率高。</p>
+    </div>
+    <div class="scene-card-body">
+      <div class="material">
+        <div class="material-title">法令纹急救·无创光电解决方案 <span class="pv-badge">PV 5.8w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>法令纹怎么改善最有效</span><span>法令纹深了怎么办</span><span>面部松弛下垂怎么改善</span><span>垮脸怎么救</span><span>面中凹陷怎么填充</span><span>光电抗衰有效果吗</span><span>超声炮去法令纹</span><span>热玛吉改善法令纹</span><span>面部紧致提升多少钱</span><span>fotona4d去法令纹</span><span>去法令纹p图</span><span>25岁面部松弛怎么办</span><span>抗初老做什么项目</span><span>光电抗衰和热玛吉区别</span><span>面部年轻化项目推荐</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">焦虑急救型：突然发现法令纹变深、面部轮廓模糊，内心慌乱，想要快速有效且无恢复期的改善方案，不影响正常上班社交</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「法令纹怎么改善」的痛点 → 引出<span class="highlight">「无创不破皮·一次治疗多重改善」</span>卖点 → KOC口吻：「28岁被同事问是不是没睡好，才发现法令纹已经深到遮不住了，做了光电抗衰，一次紧致+祛皱+肤质改善三个效果，午休时间做完下午就能回去开会」</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>法令纹突然深了怎么救？无创光电抗衰亲测有效<br><strong>【首句】</strong>28岁被问「你是不是不开心」，才知道是法令纹在作怪。做了光电抗衰才发现，原来不用动刀也能把垮掉的脸拉回来。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>女性面部左右对比图，左侧标注法令纹深/面部松弛，右侧标注改善后紧致提升<br><strong>【首图花字】</strong>法令纹不是老，是没找对方法！无创光电一次紧致+祛皱+肤质改善<br><strong>【色调/氛围】</strong>温暖治愈色调，左侧偏灰冷，右侧明亮暖色调，营造希望感</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#法令纹改善</span><span class="tag">#光电抗衰</span><span class="tag">#面部紧致</span><span class="tag">#无创抗衰</span><span class="tag">#抗初老</span><span class="tag">#轻医美</span><span class="tag">#无恢复期</span><span class="tag">#面部提升</span><span class="tag">#超声炮</span><span class="tag">#热玛吉</span></div></div>
+        </div>
+      </div>
+      <div class="material">
+        <div class="material-title">面中凹陷自救·年轻肌抗衰指南 <span class="pv-badge">PV 5.8w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>法令纹怎么改善最有效</span><span>法令纹深了怎么办</span><span>面部松弛下垂怎么改善</span><span>垮脸怎么救</span><span>面中凹陷怎么填充</span><span>光电抗衰有效果吗</span><span>超声炮去法令纹</span><span>热玛吉改善法令纹</span><span>面部紧致提升多少钱</span><span>fotona4d去法令纹</span><span>去法令纹p图</span><span>25岁面部松弛怎么办</span><span>抗初老做什么项目</span><span>光电抗衰和热玛吉区别</span><span>面部年轻化项目推荐</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">理性对比型：已意识到衰老信号，正在对比不同光电项目的效果、价格和适用性，需要决策参考</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「抗初老做什么项目」的理性需求 → 引出<span class="highlight">「一次治疗多重改善」</span>卖点 → 以专业科普口吻解释光电抗衰vs热玛吉的区别，强调无恢复期优势</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>抗初老做什么项目？光电抗衰vs热玛吉一篇讲清楚<br><strong>【首句】</strong>25岁开始抗初老到底选什么？对比了光电抗衰、热玛吉、超声炮，最后选了无恢复期的光电，理由很简单——午休做完下午就能上班。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>三列对比信息图，左中右分别展示光电抗衰/热玛吉/超声炮的核心参数（恢复期、效果维度、适用人群）<br><strong>【首图花字】</strong>25岁抗初老选哪个？一张表看懂光电抗衰vs热玛吉vs超声炮<br><strong>【色调/氛围】</strong>专业清爽的蓝白色调，信息图表风格，给人权威可信感</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#抗初老做什么</span><span class="tag">#光电抗衰</span><span class="tag">#热玛吉</span><span class="tag">#超声炮</span><span class="tag">#抗衰对比</span><span class="tag">#面部年轻化</span><span class="tag">#轻医美</span><span class="tag">#25岁抗衰</span><span class="tag">#无恢复期</span><span class="tag">#医美选择</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 2 -->
+  <div class="scene-card" id="scene-2">
+    <div class="scene-card-header">
+      <span class="num">2</span><h3>护肤用到头了想试试医美</h3>
+      <p class="reason">场景推荐理由：护肤人群向医美人群的自然迁移，用户消费能力较强且对品质有高要求。通过科普型内容建立信任，是高效获客路径。</p>
+    </div>
+    <div class="scene-card-body">
+      <div class="material">
+        <div class="material-title">护肤品瓶颈·光电抗衰升级路 <span class="pv-badge">PV 5.8w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>杭州光子嫩肤</span><span>护肤品没效果想试试医美</span><span>光电抗衰原理</span><span>抗老食物排行榜第一名</span><span>医美抗衰入门</span><span>吕良伟抗老方法</span><span>沈阳光子嫩肤</span><span>抗老食物第一名</span><span>北京光子嫩肤</span><span>热玛吉值得做吗</span><span>光子嫩肤对比图</span><span>光子嫩肤多少岁才建议做</span><span>超声炮适合什么人</span><span>奇致cc光子嫩肤</span><span>皮肤粗糙光电嫩肤</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">理性升级型：护肤品投入大量金钱精力但遇到瓶颈，开始寻求更高效的医美方案，需要科普教育和入门指引，对医美安全性有顾虑</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「护肤品没效果」的挫败 → 引出<span class="highlight">「无创不破皮·肤质改善」</span>卖点 → KOC口吻：「海蓝之谜用了半年发现法令纹还在，后来做了光电抗衰才明白——护肤是表层，光电才是真·从内改善。一次嫩肤+紧致+祛皱」</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>护肤品用到头了？光电抗衰才是真·抗老升级<br><strong>【首句】</strong>贵价精华面霜用了大半年，照镜子发现松弛纹路一点没少。直到做了光电抗衰才明白：护肤品是修修补补，光电才是从底层重启。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>左侧堆满高端护肤品（海蓝之谜、赫莲娜等），右侧一张光电抗衰治疗场景图，配箭头「升级」<br><strong>【首图花字】</strong>护肤品没效果？光电抗衰才是真·从内改善！无创不破皮·肤质紧致一次搞定<br><strong>【色调/氛围】</strong>左冷右暖，从消费主义冷色调过渡到科技医疗暖色调，传递「升级」的安心感</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#护肤品升级</span><span class="tag">#光电抗衰</span><span class="tag">#医美入门</span><span class="tag">#光子嫩肤</span><span class="tag">#肤质改善</span><span class="tag">#无创抗衰</span><span class="tag">#抗老光电</span><span class="tag">#轻医美</span><span class="tag">#美容仪升级</span><span class="tag">#皮肤粗糙改善</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 3 -->
+  <div class="scene-card" id="scene-3">
+    <div class="scene-card-header">
+      <span class="num">3</span><h3>被闺蜜比下去的容貌焦虑</h3>
+      <p class="reason">场景推荐理由：社交比较驱动的决策心理强烈，用户处于从观望到行动的临界点。通过展示真实改善案例，能有效缩短决策周期。</p>
+    </div>
+    <div class="scene-card-body">
+      <div class="material">
+        <div class="material-title">同龄人差距·抗衰逆袭攻略 <span class="pv-badge">PV 4.6w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>抗衰项目推荐</span><span>轻医美抗衰</span><span>女生抗衰该做什么</span><span>面部年轻化</span><span>光电抗衰推荐</span><span>25岁抗初老做什么</span><span>无恢复期抗衰项目</span><span>紧致提升效果好吗</span><span>抗衰医美项目对比</span><span>光电项目避雷</span><span>西安抗衰伊本番茄万象城店</span><span>面部抗衰攻略</span><span>博瑞莱抗衰</span><span>光电抗衰效果怎么样</span><span>布莱恩约翰逊抗衰实验</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">比较焦虑型：看到同龄人/闺蜜状态更好，产生心理落差，既想改善又怕踩坑，在观望和心动之间摇摆，需要可信赖的推荐</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「抗衰项目推荐」的迷茫 → 引出<span class="highlight">「无创不破皮·一次多重改善」</span>卖点 → KOC口吻：「闺蜜30岁看起来像25，问了才知道她做了光电抗衰。无恢复期，做完直接去约会，一次紧致+祛皱+肤质全改善了」</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>同龄人差距这么大？抗衰项目推荐+避雷指南<br><strong>【首句】</strong>和闺蜜合照被问是不是她妹妹……问了才知道她偷偷做了光电抗衰。无恢复期，午休做完直接去约会，一次紧致祛皱肤质全改善。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>闺蜜合照对比风格，左侧女生状态疲惫/面部松弛，右侧闺蜜状态年轻/紧致，配文字说明<br><strong>【首图花字】</strong>被闺蜜比下去了！做了光电抗衰才知道无恢复期是真的<br><strong>【色调/氛围】</strong>时尚美妆风格，对比鲜明，左侧暖灰右侧明亮，制造视觉冲击</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#抗衰推荐</span><span class="tag">#轻医美</span><span class="tag">#同龄人差距</span><span class="tag">#光电抗衰</span><span class="tag">#面部年轻化</span><span class="tag">#无恢复期</span><span class="tag">#抗初老</span><span class="tag">#医美避雷</span><span class="tag">#紧致提升</span><span class="tag">#女生抗衰</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 4 -->
+  <div class="scene-card" id="scene-4">
+    <div class="scene-card-header">
+      <span class="num">4</span><h3>皱纹松弛一起上的崩溃</h3>
+      <p class="reason">场景推荐理由：30+人群衰老信号集中爆发，对综合解决方案需求强烈。一次多重改善卖点直击痛点，客单价和转化意愿双高。</p>
+    </div>
+    <div class="scene-card-body">
+      <div class="material">
+        <div class="material-title">多重衰老信号·光电一次解决 <span class="pv-badge">PV 4.5w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>面部松弛下垂怎么改善</span><span>皱纹多怎么办</span><span>皮肤粗糙松弛</span><span>综合抗衰方案</span><span>一个项目改善多个问题</span><span>面部年轻化方案</span><span>30岁抗衰做什么项目</span><span>抗衰项目排行</span><span>光电抗衰多重改善</span><span>皱纹松弛一起做光电</span><span>面部紧致去皱</span><span>面部年轻化</span><span>口周年轻化对比图</span><span>光电抗衰全面改善</span><span>35岁面部抗衰</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">崩溃求助型：面部出现多种衰老信号（松弛+皱纹+肤质粗糙同时存在），单个项目做不过来，急需一个能一次解决多个问题的高效方案</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「一个项目改善多个问题」的核心诉求 → 直接对应<span class="highlight">「一次治疗多重改善」</span>核心卖点 → KOC口吻：「30岁发现脸上问题越来越多：松弛、皱纹、粗糙，每个都想治但没时间一个个做。光电抗衰一次解决三个问题，松弛紧致了、皱纹淡了、肤质也细腻了」</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>30岁脸上问题太多？一个项目改善松弛+皱纹+肤质粗糙<br><strong>【首句】</strong>30岁照镜子发现脸上问题越来越多：法令纹深了、脸垮了、皮肤也粗糙了。一个个治太麻烦，后来发现光电抗衰能一次解决三个问题——紧致、祛皱、嫩肤全搞定。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>面部问题标注图，标注「松弛」「皱纹」「粗糙」三个问题区域，右侧展示光电抗衰治疗后三个维度同步改善的对比<br><strong>【首图花字】</strong>30岁多重衰老信号？光电抗衰一次解决松弛+皱纹+肤质粗糙！<br><strong>【色调/氛围】</strong>专业对比风格，左侧标注问题用暖色调标记，右侧改善效果用明亮色调，突出「一次多效」的价值感</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#综合抗衰</span><span class="tag">#多重改善</span><span class="tag">#光电抗衰</span><span class="tag">#面部年轻化</span><span class="tag">#30岁抗衰</span><span class="tag">#松弛改善</span><span class="tag">#皱纹改善</span><span class="tag">#肤质改善</span><span class="tag">#一次多效</span><span class="tag">#抗衰方案</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 5 -->
+  <div class="scene-card" id="scene-5">
+    <div class="scene-card-header">
+      <span class="num">5</span><h3>抗初老黄金期的紧迫感</h3>
+      <p class="reason">场景推荐理由：20+年轻人群是增量市场，抗初老意识觉醒早。无创安全的光电项目最适合入门级用户，是长期获客的重要入口。</p>
+    </div>
+    <div class="scene-card-body">
+      <div class="material">
+        <div class="material-title">20+抗初老·光电抗衰入门指南 <span class="pv-badge">PV 3.3w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>抗初老从几岁开始</span><span>20岁需要抗衰吗</span><span>25岁抗初老做什么</span><span>预防性抗衰</span><span>早期抗衰方法</span><span>抗衰越早越好吗</span><span>20加护肤升级光电</span><span>轻医美抗衰入门</span><span>光电抗衰适合年轻人吗</span><span>预防衰老做什么项目</span><span>25岁做光电抗衰</span><span>抗初老光电嫩肤</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">预防焦虑型：20-25岁刚开始关注抗衰，听说25岁是黄金期，不想错过最佳时机，不知道该做什么项目，怕做早了浪费又怕做晚了效果不好</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「抗初老从几岁开始」的预防焦虑 → 引出<span class="highlight">「无创安全·肤质改善」</span>卖点（适合年轻肌的轻医美） → KOC口吻：「23岁开始做光电抗衰，不是因为我老了，是因为预防比修复容易太多了。无创不破皮，做完直接去上班」</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>20+抗初老什么时候开始？光电抗衰入门一篇讲透<br><strong>【首句】</strong>23岁开始做光电抗衰，不是因为我老了，是因为 Prevention > Correction。无创不破皮，午休时间做完下午直接上班，预防比修复容易太多。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>年龄轴概念图，标注20+/25+/30+各阶段适合的抗衰方案，重点突出20+光电抗衰的优势<br><strong>【首图花字】</strong>20+抗初老该做什么？无创光电·预防大于修复·随做随走<br><strong>【色调/氛围】</strong>青春活力风格，粉色+白色+金色点缀，传递「趁早行动」的紧迫感和积极态度</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#抗初老</span><span class="tag">#20+抗衰</span><span class="tag">#预防性抗衰</span><span class="tag">#光电抗衰</span><span class="tag">#轻医美入门</span><span class="tag">#年轻肌</span><span class="tag">#早期抗衰</span><span class="tag">#25岁抗衰</span><span class="tag">#护肤升级</span><span class="tag">#无创抗衰</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 6 -->
+  <div class="scene-card" id="scene-6">
+    <div class="scene-card-header">
+      <span class="num">6</span><h3>怕动刀怕恢复期的怂包心态</h3>
+      <p class="reason">场景推荐理由：这是光电抗衰最大的差异化优势场景。大量用户因恐惧被挡在医美门外，无创无恢复期卖点能精准消除决策障碍。</p>
+    </div>
+    <div class="scene-card-body">
+      <div class="material">
+        <div class="material-title">怕痛星人·无创光电抗衰攻略 <span class="pv-badge">PV 3.1w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>怕痛能做光电抗衰吗</span><span>无痛抗衰项目推荐</span><span>无恢复期医美抗衰</span><span>不动刀抗衰方法</span><span>非侵入式面部提升</span><span>光电抗衰疼吗</span><span>安全抗衰方式</span><span>轻医美无创抗衰</span><span>无创面部提升</span><span>医美恐惧怎么办</span><span>不破皮抗衰项目</span><span>午休时间做抗衰</span><span>光电抗衰副作用</span><span>怕疼的人适合什么医美</span><span>无创抗衰安全吗</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">恐惧观望型：对医美有强烈向往但恐惧手术和注射，担心疼痛、风险和恢复期影响工作生活，需要充分的安全感建立</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「怕痛能做医美吗」的恐惧 → 引出<span class="highlight">「无创不破皮·无恢复期」</span>核心卖点 → KOC口吻：「我连抽血都怕，居然做了光电抗衰。全程不痛，做完脸上什么都没有，直接去上班。同事都没发现我做了项目」</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>怕痛星人也能做的抗衰？无创光电抗衰全记录<br><strong>【首句】</strong>我连打疫苗都要闭眼的人，居然做了光电抗衰。全程几乎没感觉，做完脸上连红印都没有，直接回去上班。同事问我最近怎么状态这么好。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>治疗前后素颜对比，左侧标注「怕痛+怕恢复期」，右侧标注「无痛无创·随做随走」，配治疗中轻松表情的自拍<br><strong>【首图花字】</strong>怕痛也能做抗衰！无创不破皮·无恢复期·午休时间搞定<br><strong>【色调/氛围】</strong>干净明亮的医疗科技风，白色+浅蓝，传递安全、安心、专业的信任感</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#怕痛医美</span><span class="tag">#无创抗衰</span><span class="tag">#无恢复期</span><span class="tag">#光电抗衰</span><span class="tag">#轻医美</span><span class="tag">#不破皮</span><span class="tag">#午休美容</span><span class="tag">#医美恐惧</span><span class="tag">#安全抗衰</span><span class="tag">#无痛抗衰</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 7 -->
+  <div class="scene-card" id="scene-7">
+    <div class="scene-card-header">
+      <span class="num">7</span><h3>重要场合前的急救护肤</h3>
+      <p class="reason">场景推荐理由：时间节点驱动的紧急需求，用户决策速度快、价格敏感度低。无恢复期卖点在此场景下有极强的说服力。</p>
+    </div>
+    <div class="scene-card-body">
+      <div class="material">
+        <div class="material-title">婚前急救·无恢复期光电救场 <span class="pv-badge">PV 2.8w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>婚前急救护肤</span><span>重要场合前皮肤急救</span><span>快速紧致提升</span><span>无恢复期抗衰</span><span>拍写真前皮肤准备</span><span>急救护肤方案光电</span><span>面试前改善皮肤</span><span>同学会前变美</span><span>周末能做光电抗衰吗</span><span>光电抗衰当天恢复</span><span>午休美容抗衰</span><span>约会前皮肤急救</span><span>无创抗衰快速见效</span><span>光电嫩肤急救</span><span>随做随走抗衰项目</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">时间紧迫型：有明确时间节点压力（婚礼/面试/同学会），需要快速见效且无恢复期的方案，不能影响正常社交和工作，处于决策窗口期</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「婚前急救护肤」的紧迫感 → 引出<span class="highlight">「无恢复期·随做随走」</span>核心卖点 → KOC口吻：「婚礼前一周做的光电抗衰，当天做完直接去试妆，皮肤紧致了法令纹也淡了，摄影师都说状态超好」</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>婚前一周还能救！无恢复期光电抗衰亲测<br><strong>【首句】</strong>距离婚礼还有一周，熬夜备婚脸垮到不敢试妆。闺蜜拉我去做了光电抗衰，当天做完直接去试妆，紧致了法令纹淡了，摄影师说状态超好。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>新娘备婚场景，左侧疲惫垮脸，右侧做完光电后容光焕发的试妆自拍<br><strong>【首图花字】</strong>婚前一周救急！无恢复期光电抗衰·当天做完直接试妆<br><strong>【色调/氛围】</strong>浪漫婚礼色调，粉色+金色，营造幸福感，对比前后状态差异</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#婚前急救</span><span class="tag">#无恢复期抗衰</span><span class="tag">#光电抗衰</span><span class="tag">#快速紧致</span><span class="tag">#婚礼护肤</span><span class="tag">#随做随走</span><span class="tag">#午休美容</span><span class="tag">#拍写真准备</span><span class="tag">#约会急救</span><span class="tag">#同学会变美</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 8 -->
+  <div class="scene-card" id="scene-8">
+    <div class="scene-card-header">
+      <span class="num">8</span><h3>刷到科普被种草想行动</h3>
+      <p class="reason">场景推荐理由：用户已完成教育阶段，处于行动窗口期。此时投放机构信任类内容，转化链路最短、ROI最高。</p>
+    </div>
+    <div class="scene-card-body">
+      <div class="material">
+        <div class="material-title">光电抗衰避雷·机构选择指南 <span class="pv-badge">PV 2.6w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>光电抗衰攻略</span><span>光电抗衰科普</span><span>光电抗衰哪家好</span><span>抗衰项目对比</span><span>医美机构视频</span><span>医美机构退费</span><span>光电设备认证查询</span><span>抗老内行人的机构美学</span><span>医美机构怎么选</span><span>澳门逸苗医美机构介绍</span><span>光电抗衰真实效果</span><span>抗衰项目排行</span><span>宋美丽的医美机构</span><span>医美机构招聘</span><span>釜山医美机构</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">理性决策型：已被科普内容教育过，对光电抗衰有基本了解，正在比价、看口碑、选机构，处于行动转化窗口期，需要信任背书和决策辅助</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「光电抗衰攻略/哪家好」的决策需求 → 引出<span class="highlight">「无创安全·多重改善」</span>卖点 + 机构信任背书 → 专业科普口吻提供选机构标准，自然植入华南地区光电抗衰优势</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>光电抗衰全攻略｜华南靠谱机构推荐+避雷清单<br><strong>【首句】</strong>刷了三个月光电抗衰科普终于行动了。对比了热玛吉、超声炮、Fotona4D，选了华南这家做光电抗衰——无恢复期、一次改善松弛皱纹肤质，关键是设备正规、医生靠谱。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>攻略清单风格，左侧列出选机构5大标准，右侧标注华南推荐机构+设备认证标识<br><strong>【首图花字】</strong>光电抗衰怎么选机构？5个标准帮你避雷！附华南靠谱推荐<br><strong>【色调/氛围】</strong>干货笔记风，黄白主色调，清晰分区排版，给人「实用可收藏」的感觉</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#光电抗衰攻略</span><span class="tag">#医美避雷</span><span class="tag">#华南医美</span><span class="tag">#机构推荐</span><span class="tag">#抗衰对比</span><span class="tag">#热玛吉真假</span><span class="tag">#超声炮价格</span><span class="tag">#fotona4d</span><span class="tag">#轻医美探店</span><span class="tag">#设备认证</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 9 -->
+  <div class="scene-card" id="scene-9">
+    <div class="scene-card-header">
+      <span class="num">9</span><h3>华南湿热加速衰老的恐慌</h3>
+      <p class="reason">场景推荐理由：地域+气候痛点场景，华南是服务主战场。地域化内容能精准触达目标人群，建立本地信任感，转化率高。</p>
+    </div>
+    <div class="scene-card-body">
+      <div class="material">
+        <div class="material-title">华南气候抗衰·地域护肤攻略 <span class="pv-badge">PV 2.3w</span></div>
+        <div class="material-content">
+          <div class="field"><div class="field-label">全量相关词</div><div class="word-list"><span>广州光电抗衰推荐</span><span>深圳光电抗衰哪家好</span><span>华南地区抗衰医美</span><span>南方气候皮肤老化快</span><span>肤质粗糙光电改善</span><span>后背毛孔粗大还长黑毛</span><span>阿达帕林凝胶去毛孔粗大吗</span><span>毛孔粗大光电嫩肤</span><span>南方抗衰攻略</span><span>广州轻医美抗衰</span><span>深圳医美抗衰推荐</span><span>东莞光电抗衰</span><span>佛山医美抗衰</span><span>华南皮肤抗衰机构</span><span>南方湿热皮肤松弛</span></div></div>
+          <div class="field"><div class="field-label">用户心理</div><div class="field-value">地域焦虑型：华南湿热气候导致皮肤老化加速，出油多毛孔大暗沉快，比北方同龄人更显老，需要针对性的地域化抗衰方案</div></div>
+          <div class="field"><div class="field-label">卖点植入逻辑</div><div class="field-value">用户搜「南方气候皮肤老化快」的地域焦虑 → 引出<span class="highlight">「肤质改善·毛孔粗大改善」</span>卖点 → KOC口吻：「在广州待了三年，出油+湿热让我毛孔大法令纹深。做了光电抗衰才发现，原来湿热气候导致的肤质问题，光电一次就能改善」</div></div>
+          <div class="field"><div class="field-label">标题和内容</div><div class="field-value"><strong>【标题】</strong>华南湿热加速衰老？光电抗衰才是南方女孩的救星<br><strong>【首句】</strong>来广州三年，湿热+出油让我比北方闺蜜老了不止五岁。毛孔粗大、肤色暗沉、法令纹加深……直到做了光电抗衰，才把这些湿热气候带来的老化问题一次性解决。</div></div>
+          <div class="field"><div class="field-label">首图视觉建议</div><div class="field-value"><strong>【画面主体】</strong>华南城市地标（广州塔/深圳湾）+女性护肤对比图，左侧湿热导致的肤质问题标注，右侧光电改善后效果<br><strong>【首图花字】</strong>华南湿热加速衰老？光电抗衰·一次改善松弛+皱纹+肤质粗糙<br><strong>【色调/氛围】</strong>城市现代风，蓝灰主色调配暖光点缀，传递「在湿热环境中找到解法」的希望感</div></div>
+          <div class="field"><div class="field-label">话题标签</div><div class="tags"><span class="tag">#华南抗衰</span><span class="tag">#广州光电抗衰</span><span class="tag">#深圳医美</span><span class="tag">#湿热护肤</span><span class="tag">#肤质改善</span><span class="tag">#毛孔粗大</span><span class="tag">#南方抗衰</span><span class="tag">#光电嫩肤</span><span class="tag">#气候抗衰</span><span class="tag">#轻医美</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">光电抗衰 · 搜索广告素材建议 &nbsp;·&nbsp; 小红书医美运营</div>
+</div>
+</body>
+</html>
