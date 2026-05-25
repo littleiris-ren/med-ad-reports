@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>医美搜索广告-笔记内容建议</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;background:#f0f2f5}
+.topbar{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:12px 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:space-between}
+.topbar h1{font-size:16px;font-weight:700}
+.topbar .back{color:rgba(255,255,255,.85);text-decoration:none;font-size:14px;padding:4px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.3);transition:all .2s}
+.topbar .back:hover{color:#fff;background:rgba(255,255,255,.15)}
+.tabs{display:flex;gap:0;background:#fff;padding:8px 16px;box-shadow:0 1px 3px rgba(0,0,0,.08);position:sticky;top:49px;z-index:99}
+.tab{flex:1;padding:10px 16px;text-align:center;font-size:14px;font-weight:600;cursor:pointer;border-radius:8px;color:#64748b;background:transparent;border:2px solid transparent;transition:all .2s;margin:0 4px}
+.tab:hover{color:#4f46e5;background:#f5f3ff}
+.tab.active{color:#fff;background:linear-gradient(135deg,#667eea,#764ba2);border-color:transparent}
+.iframe-wrap{position:fixed;top:105px;left:0;right:0;bottom:0}
+iframe{width:100%;height:100%;border:none;display:none}
+iframe.active{display:block}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="." class="back">← 返回首页</a>
+<h1>医美搜索广告-笔记内容建议</h1>
+<span></span>
+</div>
+<div class="tabs">
+<div class="tab active" onclick="switchTab(0)"> 注射填充</div>
+<div class="tab" onclick="switchTab(1)"> 祛斑</div>
+<div class="tab" onclick="switchTab(2)"> 光电抗衰</div>
+</div>
+<div class="iframe-wrap">
+<iframe class="active" src="注射填充-搜索广告素材建议.html" id="f0"></iframe>
+<iframe src="祛斑-搜索广告素材建议.html" id="f1"></iframe>
+<iframe src="光电抗衰-搜索广告素材建议.html" id="f2"></iframe>
+</div>
+<script>
+function switchTab(i){
+  document.querySelectorAll('.tab').forEach((t,j)=>t.classList.toggle('active',j===i));
+  document.querySelectorAll('iframe').forEach((f,j)=>f.classList.toggle('active',j===i));
+}
+</script>
+</body>
+</html>
